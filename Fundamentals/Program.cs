@@ -8,8 +8,8 @@
 // Max Values
 int intMax = int.MaxValue; // 32-bit
 long longMax = long.MaxValue; // 64-bit
-short shortMax = short.MaxValue; //32-bit
-byte byteMax = byte.MaxValue; //32-bit
+short shortMax = short.MaxValue; //16-bit
+byte byteMax = byte.MaxValue; //8-bit
 
 Console.WriteLine("Int Max: " + intMax);
 Console.WriteLine("Long Max: " + longMax);
@@ -25,7 +25,7 @@ Console.WriteLine("Byte Min: " + byte.MinValue);
 // Floating Point Types
 float temperature = 36.5f;   // 32-bit
 double pi = 3.14159;         // 64-bit (default)
-decimal money = 99.99m;      // High precision (financial)
+decimal money = 99.99m;      // 128-bit High precision (financial)
 
 Console.WriteLine("Temperature :" + temperature);
 Console.WriteLine("Pi :" + pi);
