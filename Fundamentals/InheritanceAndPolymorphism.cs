@@ -87,11 +87,11 @@ static class InheritanceAndPolymorphism
     public static void Run()
     {
         SecurityThreat[] threats =
-{
+        [
             new MalwareAttack("192.168.1.10", "Trojan.GenericKD"),
             new BruteForceAttack("10.0.0.45", 847),
             new RansomwareAttack("172.16.0.5", "LockBit.3", 50000)
-        };
+        ];
 
         foreach (SecurityThreat threat in threats)
         {
@@ -99,5 +99,17 @@ static class InheritanceAndPolymorphism
             threat.Mitigate();  // polymorphic
             Console.WriteLine();
         }
+
+        Console.WriteLine("Decision Table:");
+        Console.WriteLine("Keyword\tUse When");
+        Console.WriteLine("virtual\tBase has a default behavior, derived classes may customize it");
+        Console.WriteLine("override\tDerived class replaces base behavior, polymorphism required");
+        Console.WriteLine("abstract\tBase cannot define a sensible default, derived must implement");
+        Console.WriteLine("sealed (class)\tClass must not be extended — security, finality");
+        Console.WriteLine("sealed (method)\tOverride chain must stop at this level");
+        Console.WriteLine("new (hiding)\tIntentionally breaking polymorphism — rare, deliberate");
+        Console.WriteLine("base\tReusing base constructor or method logic in derived class");
+
+
     }
 }

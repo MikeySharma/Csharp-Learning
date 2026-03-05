@@ -9,4 +9,5 @@
 // ParamsArray.Run();
 // ClassesAndObjects.Run();
 
-InheritanceAndPolymorphism.Run();
+// InheritanceAndPolymorphism.Run();
+AbstractAndInterface.Run();
