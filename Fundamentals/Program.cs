@@ -6,4 +6,5 @@
 // OverLoading.Run();
 // ControlFlow.Run();
 // OptionalAndNamedParams.Run();
-ParamsArray.Run();
+// ParamsArray.Run();
+ClassesAndObjects.Run();
