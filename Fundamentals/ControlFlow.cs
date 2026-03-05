@@ -1,5 +1,20 @@
 static class ControlFlow
 {
+    public static void Swap(ref int x, ref int y)
+    {
+        (y, x) = (x, y);
+    }
+
+    public static bool TryParse(string input, out int result)
+    {
+        return int.TryParse(input, out result);
+    }
+    public static void PrintValue(in int value)
+    {
+        Console.WriteLine($"Value: {value}");
+        // value++; // This will cause a compile-time error because 'value' is read-only in this context.
+    }
+
     public static void Run()
     {
         int age = 18;
@@ -76,5 +91,30 @@ static class ControlFlow
         Console.WriteLine("Main difference between while and do-while is that do-while executes the block at least once, while while may not execute at all if the condition is false.");
 
 
+        // Ref-Out-In parameters
+        Console.WriteLine("\nRef-Out-In parameters:");
+        int a = 5;
+        int b = 10;
+
+        // ref parameters
+        Console.WriteLine($"Before: a = {a}, b = {b}");
+        Swap(ref a, ref b);
+        Console.WriteLine($"After: a = {a}, b = {b}");
+
+        // out parameters
+        Console.WriteLine("\nOut parameters:");
+        if (TryParse("123", out int result))
+        {
+            Console.WriteLine($"Parsed number: {result}");
+        }
+        else
+        {
+            Console.WriteLine("Failed to parse number.");
+        }
+
+        // in parameters
+        Console.WriteLine("\nIn parameters:");
+        int x = 5;
+        PrintValue(in x);
     }
 }
