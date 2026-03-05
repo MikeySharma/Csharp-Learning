@@ -7,4 +7,6 @@
 // ControlFlow.Run();
 // OptionalAndNamedParams.Run();
 // ParamsArray.Run();
-ClassesAndObjects.Run();
+// ClassesAndObjects.Run();
+
+InheritanceAndPolymorphism.Run();
